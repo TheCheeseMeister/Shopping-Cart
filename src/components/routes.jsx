@@ -1,5 +1,6 @@
 import App from '../App';
-import Shop from './Shop'
+import Shop from './Shop';
+import Cart from './Cart';
 
 const routes = [
     {
@@ -10,6 +11,10 @@ const routes = [
     {
         path: 'shop',
         element: <Shop />,
+    },
+    {
+        path: 'cart',
+        element: <Cart />
     },
 ];
 

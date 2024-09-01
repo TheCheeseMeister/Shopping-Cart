@@ -44,11 +44,11 @@ const Item = ({subURL}) => {
             if (isMounted.current) {
                 let temp = JSON.parse(localStorage.getItem('cart'));
                 
-                let updateIndex = temp.findIndex((ele) => ele[0] == product.title);
+                let updateIndex = temp.findIndex((ele) => ele[0].title == product.title);
                 if (updateIndex != -1) {
                     temp[updateIndex][1] += Number(value);
                 } else {
-                    temp.push([product.title, value]);
+                    temp.push([product, value]);
                 }
 
                 localStorage.setItem('cart', JSON.stringify(temp));

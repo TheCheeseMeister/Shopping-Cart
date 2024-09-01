@@ -37,9 +37,13 @@ const Nav = () => {
                 }}>
                     <Button component={Link} to={"/"} variant='contained'>Home</Button>
                     <Button component={Link} to={"shop"} variant='contained'>Store</Button>
-                    
+
                     <Badge badgeContent={amount} color="primary">
-                        <ShoppingCartIcon onClick={displayCart} />
+                        <Button component={Link} to={"cart"} sx={{
+                            color: 'white',
+                        }}>
+                            <ShoppingCartIcon onClick={displayCart} />
+                        </Button>
                     </Badge>
                 </Box>
             </AppBar>
